@@ -1,0 +1,92 @@
+---
+title: Josh Vogt - Web Developer
+all: true
+page_only: true
+layout: default
+permalink: "/"
+pagestyle: home.css
+pagejs: home.js
+---
+
+
+
+<section class="block indie-intro">
+  <h1 class="heading">Josh Vogt.</h1>
+	<p>
+	I'm a Toronto based web developer with over 10 years of experience. I focus on:
+  </p>
+	<ul>
+	  <li>
+      <strong>Accessibility</strong>
+      <p>
+        I am very familiar with WCAG 2.1, WAI-ARIA and building sites that comply with AODA.
+      </p>
+    </li>
+    <li>
+      <strong>Performance</strong>
+      <p>
+        Choosing the right tool and technique for can help improve site performance without impacting developer convenience.
+      </p>
+    </li>
+    <li>
+      <strong>CSS</strong>
+      <p>
+        Modern CSS features like CSS Grid Layout, CSS Custom Properties and feature queries make CSS easier to write and maintain.
+      </p>
+    </li>
+	  <li>
+      <strong>Progressive Web Apps.</strong>
+      <p>
+        Service Workers, Web Manifests and the Cache API make sites network resiliant and compete with native apps for features and engagement.
+      </p>
+    </li>
+  </ul>
+
+	</p>
+ </section>
+
+  <section class="block feed-block">
+    <h2>Blog</h2>
+      <ul class="posts-list">
+        {% for post in site.categories.blog %}
+        <li>
+          <a href="{{ post.url }}">{{ post.title }} - {{ post.date | date: '%B %d, %Y' }}</a>
+          <p>{{ post.abstract }}</p>
+        </li>
+       {% endfor %}
+      </ul>
+      <h2>Notes</h2>
+        <ul class="posts-list">
+          {% for post in site.categories.note %}
+          <li>
+            <p>
+              {{ post.abstract }}
+            </p>
+            <a href="{{ post.url }}">Read full note &raquo; </a>
+          </li>
+         {% endfor %}
+        </ul>
+        <h2>Links</h2>
+        <ul class="links-list">
+          {% for post in site.categories.link %}
+          <li>
+            <a href="{{ post.link}}">{{ post.title }}</a>
+              <p>{{ post.content }}</p>
+              <a href="{{ post.url }}">View Permalink</a>
+            </li>
+         {% endfor %}
+          </ul>
+  </section>
+
+
+  <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

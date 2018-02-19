@@ -1,0 +1,18 @@
+me:
+  name: Josh Vogt
+  bio: >-
+    Front-end developer. Focused on performance, accessibility and standards.
+  webmention: joshvogt.co
+social:
+  - name: twitter
+    url: 'https://twitter.com/jshvgt'
+    class: u-url;
+  - name: github
+    url: 'https://github.com/dumaurier'
+    class: u-url;
+  - name: email
+    url: 'mailto:joshvogt@gmail.com'
+    class: u-email
+  - name: my site
+    url: 'https://joshvogt.co/'
+    class: u-url

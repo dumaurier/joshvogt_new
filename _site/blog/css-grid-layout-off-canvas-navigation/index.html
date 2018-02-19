@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en" class="online">
+
+  <head lang="en">
+  <script>
+    // https://github.com/filamentgroup/loadCSS
+    !function(e){"use strict"
+    var n=function(n,t,o){function i(e){return f.body?e():void setTimeout(function(){i(e)})}var d,r,a,l,f=e.document,s=f.createElement("link"),u=o||"all"
+    return t?d=t:(r=(f.body||f.getElementsByTagName("head")[0]).childNodes,d=r[r.length-1]),a=f.styleSheets,s.rel="stylesheet",s.href=n,s.media="only x",i(function(){d.parentNode.insertBefore(s,t?d:d.nextSibling)}),l=function(e){for(var n=s.href,t=a.length;t--;)if(a[t].href===n)return e()
+    setTimeout(function(){l(e)})},s.addEventListener&&s.addEventListener("load",function(){this.media=u}),s.onloadcssdefined=l,l(function(){s.media!==u&&(s.media=u)}),s}
+    "undefined"!=typeof exports?exports.loadCSS=n:e.loadCSS=n}("undefined"!=typeof global?global:this)
+  </script>
+  <!-- Static Meta Tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="copyright" content="&copy 2018 " />
+  <meta name="description" content="Site description" />
+  <meta name="robots" content="index, follow"  />
+  <link rel="canonical" href="https://joshvogt.co" />
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0073bd">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static-assets/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static-assets/images/icon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static-assets/images/icon-16x16.png">
+  <link rel="mask-icon" href="static-assets/images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="icon" href="favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="Josh Vogt RSS" href="/feed.xml">
+  <title>CSS Grid Layout: Off-canvas Navigation</title>
+
+
+  <!-- Meta tags for social media -->
+  <meta property="og:locale" content="en" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="CSS Grid Layout: Off-canvas Navigation"  />
+  <meta property="og:url" content="https://joshvogt.co/blog/css-grid-layout-off-canvas-navigation/"  />
+  <meta property="og:site_name" content="Josh Vogt - Web Developer"  />
+  <meta property="og:image" content="static-assets/images/icon-512x512.png" />
+  <meta property="og:description" content="Site description"  />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:title" content="CSS Grid Layout: Off-canvas Navigation" />
+  <meta property="twitter:image" content="https://joshvogt.co//static-assets/images/icon-512x512.png" />
+  <meta property="twitter:site" content="@jshvgt"  />
+  <meta property="twitter:creator" content="@jshvgt"  />
+  <meta property="twitter:description" content="site description"  />
+  <link rel="pingback" href="https://webmention.io//xmlrpc" />
+  <link rel="webmention" href="https://webmention.io//webmention" />
+  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
+  
+
+  
+
+  
+
+  
+
+  <style>
+  *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#0073BD;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;-webkit-text-decoration-style:double;-moz-text-decoration-style:double;text-decoration-style:double;text-decoration-color:#93caeb}a:focus,a:hover{text-decoration:inherit;outline:1px dashed #cf4829;background:#fdf9d8}img{max-width:100%}.highlighter-rouge{margin-top:1rem}.highlight{padding:.5rem;line-height:1.6;background:#0073BD;color:#fff;font-size:16px;font-size:1rem;overflow:auto;margin:10px}.disabled-link{cursor:not-allowed;color:#f7fafb}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f7fafb;font-size:16px;font-size:1rem}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}.global-footer{min-height:130px;padding:.5rem}.indieweb-social{list-style:none;margin:0;padding:20px;display:grid;grid-template-columns:repeat(auto-fill, minmax(100px, 1fr))}.indieweb-social li+li{margin-top:0}.indieweb-social a{color:#525967;text-decoration-color:#cf4829}.footer-bio{max-width:460px;padding:20px}.header-container{-ms-flex:0 0 auto;flex:0 0 auto;height:60px;width:100vw;border-bottom:0.15rem solid #525967;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:0 10px}.header-container h1{font-size:17.6px;font-size:1.1rem;font-weight:600}.header-container .home-link{display:inline-block;white-space:nowrap;line-height:60px;height:100%}.header-container .site-logo{width:55px;float:left;margin-right:.5rem}.header-container .header-links{margin:0}.header-container .header-links a{padding:0 5px;text-decoration-color:#850057;color:#0073BD}@media screen and (min-width: 30rem){.header-links{margin:0 3rem}}
+
+    .post-container{margin-top:4rem}.post{max-width:800px;padding:10px 20px;margin:0 auto}.post-container p{font-size:18px;font-size:1.125rem;line-height:1.4;max-width:640px}.global-footer{display:block}.mentions-list{list-style:none;margin:0;padding:0}.mentions-list li{border-left:4px solid #fdf9d8}.mentions-list li:nth-of-type(odd){background:#f7fafb}.mention-item{padding:.5rem 0}.mention-item cite{display:inherit;margin:.8125rem .4rem}.mention-form fieldset{border:none;padding:0 0 20px 0;margin-top:30px}.mention-form input[type="url"]{width:75%;margin-right:2%;border:1px solid #25282e;padding:8px;border-radius:4px}.mention-form input:required:empty{border:1px solid #25282e}
+
+  
+  </style>
+
+  
+  <script>
+    loadCSS("/static-assets/css/new-base.css");
+  </script>
+  
+
+ 
+ <script>
+(function(d) {
+  var config = {
+    kitId: 'veg4nzj',
+    scriptTimeout: 3000,
+    async: true
+  },
+  h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+})(document);
+</script>
+</head>
+
+
+  <body>
+    <header class="header-container">
+  <h1>
+    <a class="home-link" href="/">
+    Josh Vogt
+    </a>
+</h1>
+
+  <nav class="header-links">
+    <a href="/posts/">Posts</a>
+    <a href="/notes/">Notes</a>
+    <a href="/links/">Links</a>
+  </nav>
+</header>
+
+
+    <main id="main" tabindex="0">
+      <article class="post h-entry">
+  <header>
+    <h1 class="p-name">CSS Grid Layout: Off-canvas Navigation</h1>
+    <p>Published by <a class="p-author h-card" href="https://joshvogt.co">Josh Vogt</a>
+     on <time class="dt-published" datetime="2017-05-02 23:27:00 +0000">May 02, 2017</time></p>
+     <p class="p-summary"><em>How to create a responsive layout with off-canvas navigation using CSS Grid Layout. Also covers accessibility and hot dogs.</em></p>
+     <p>
+       <a class="u-url" href="https://joshvogt.co/blog/css-grid-layout-off-canvas-navigation/">Permalink</a>
+     </p>
+  </header>
+  <div class="e-content post-container">
+    <p>Off-canvas navigation is a popular UI interaction in repsonsive design. CSS Grid Layout makes adjusting the interaction for different device widths easy thanks to its ability to overlay items.</p>
+
+<p>The final <a href="/CSS-Grid-Layout-Examples/off-canvas">CSS Grid Layout: Off-canvas demo</a> can be accessed by clicking the link.</p>
+
+<p>A stripped down version of this demo is available on <a href="https://codepen.io/josh_vogt/pen/GmMWgK/">CodePen</a>.</p>
+
+<h2 id="the-base-html-and-css">The base HTML and CSS.</h2>
+
+<p>The basic structure of the page is fairly simple.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"main-header"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/header&gt;</span>
+  <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"main-nav js-nav"</span> <span class="na">id=</span><span class="s">"main-nav"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/nav&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"main-content"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"main-footer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/main&gt;</span></code></pre></figure>
+
+<p>When the grid is defined, We’ll want to assign the <code class="highlighter-rouge">main-nav</code> and <code class="highlighter-rouge">main-content</code> to the same <code class="highlighter-rouge">grid-row</code> regardless of viewport size. Whether or not the <code class="highlighter-rouge">main-nav</code> is visible and how wide it is will depend on the viewport.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.grid</span><span class="p">{</span>
+  <span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
+  <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
+  <span class="py">grid-template-rows</span><span class="p">:</span> <span class="m">80px</span> <span class="n">minmax</span><span class="p">(</span><span class="n">calc</span><span class="p">(</span><span class="m">100vh</span> <span class="n">-</span> <span class="m">200px</span><span class="p">),</span> <span class="nb">auto</span><span class="p">)</span> <span class="m">120px</span><span class="p">;</span>
+  <span class="nl">overflow</span><span class="p">:</span> <span class="nb">hidden</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The grid will have a simple structure of three rows; an 80px tall header, a fluid content area and a footer with a fixed height of 120px. The content area’s height uses <code class="highlighter-rouge">min-max</code> and <code class="highlighter-rouge">calc</code> to set the minimum height to 100vh minus the combined height of the header and footer. This applies to all viewports. The grid’s <code class="highlighter-rouge">overflow</code> property is set to <code class="highlighter-rouge">hidden</code> for large viewports that have the <code class="highlighter-rouge">main-content</code> area restricted to 90vw and centered in the viewport. This prevents the <code class="highlighter-rouge">main-nav</code> from leaking outside the container.</p>
+
+<p>The simplified placement of the grid items is as follows:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.main-header</span><span class="p">{</span>
+  <span class="nl">grid-row</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.main-nav</span><span class="p">{</span>
+  <span class="nl">grid-row</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+  <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">200</span><span class="p">;</span> <span class="c">/* sets the stacking order of this grid item above the .main-content */</span>
+<span class="p">}</span>
+
+<span class="nc">.main-content</span><span class="p">{</span>
+  <span class="nl">grid-row</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span> <span class="c">/* sets the placement of the grid-item to same row as .main-nav */</span>
+  <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">-1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nc">.main-footer</span><span class="p">{</span>
+  <span class="nl">grid-row</span><span class="p">:</span> <span class="m">3</span><span class="p">;</span>
+  <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span> <span class="p">/</span> <span class="m">-1</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>Now that the basic grid is defined, some CSS is needed on the <code class="highlighter-rouge">main-nav</code> to push it off the viewport and a rule to trigger the animation when the class <code class="highlighter-rouge">is-active</code> is present.</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.main-nav</span><span class="p">{</span>
+  <span class="nl">grid-row</span><span class="p">:</span> <span class="m">2</span><span class="p">;</span>
+  <span class="nl">grid-column</span><span class="p">:</span> <span class="m">1</span><span class="p">;</span>
+  <span class="nl">z-index</span><span class="p">:</span> <span class="m">200</span><span class="p">;</span>
+
+  <span class="c">/* new rules for off-canvas action */</span>
+
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">-100%</span><span class="p">);</span> <span class="c">/* 1 */</span>
+  <span class="nl">transition</span><span class="p">:</span> <span class="n">transform</span> <span class="m">.2s</span> <span class="n">linear</span><span class="p">;</span> <span class="c">/* 2 */</span>
+  <span class="py">will-change</span><span class="p">:</span> <span class="n">transform</span><span class="p">;</span> <span class="c">/* 3 */</span>
+<span class="p">}</span>
+
+<span class="nc">.main-nav.is-active</span><span class="p">{</span>
+  <span class="nl">transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">0</span><span class="p">);</span> <span class="c">/* 4 */</span>
+<span class="p">}</span></code></pre></figure>
+
+<ol>
+  <li>Moves the <code class="highlighter-rouge">main-nav</code> out of the viewport. When animating an element it’s best to use <code class="highlighter-rouge">transforms</code> over offset properties like <code class="highlighter-rouge">top</code>, or <code class="highlighter-rouge">left</code> if you want a smooth animation.</li>
+  <li>Defines the transition on the animation, using a cubic-bezier for the timing function is probably going to feel nicer than one of the standard keyword based timing functions.</li>
+  <li>The <code class="highlighter-rouge">will-change</code> property allows CSS authors to provide a hint to the browser that a property will change which allows it to start optimzation before the change occurs. It’s a potential antidote to a bad case of the Janks. <a href="https://developer.mozilla.org/en/docs/Web/CSS/will-change">Read more on MDN</a>.</li>
+  <li>When the <code class="highlighter-rouge">is-active</code> class is added to the element it will animate from the left across the <code class="highlighter-rouge">main-content</code> area.</li>
+</ol>
+
+<h3 id="bigger-screens">Bigger Screens</h3>
+
+<p>We’ll need to adjust the grid layout from its mobile first version to support an unknown number of device widths.</p>
+
+<p>Once the viewport gets too wide that it would be weird to have the off-canvas menu take up the full width so we’ll want to adjust the grid. I’ve set it at 45em/720px. This only requires a change to the <code class="highlighter-rouge">grid</code> container:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">45em</span><span class="p">){</span>
+<span class="nc">.grid</span><span class="p">{</span>
+    <span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">240px</span> <span class="nb">repeat</span><span class="p">(</span><span class="m">4</span><span class="p">,</span> <span class="m">1</span><span class="n">fr</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>That’s it.</p>
+
+<p>The <code class="highlighter-rouge">grid-row</code> and <code class="highlighter-rouge">grid-column</code> properties that defined the grid index placement in the mobile version still work in the 720px and wider version. By adjusting the values of the <code class="highlighter-rouge">grid-template-columns</code> property on the <code class="highlighter-rouge">.grid</code> class it just works on larger screens. The difference is the grid’s first column is now set to 240px and the rest of the content can span across 4 equal units plus the 240px reserved for the nav. All of the rules that were applied to the <code class="highlighter-rouge">main-nav</code> class above are all still valid here as well.</p>
+
+<h3 id="biggerer-screens">Bigger(er) Screens</h3>
+
+<p>For users with really, really wide screens (or about 118em/1900px) there will be enough screen real estate to have the menu always visible. Only two rules needs to be changed to do this:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min_width</span><span class="p">:</span> <span class="m">118em</span><span class="p">){</span>
+  <span class="nc">.main-nav</span><span class="p">{</span>
+    <span class="nl">transform</span><span class="p">:</span> <span class="n">translateX</span><span class="p">(</span><span class="m">0</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="nc">.main-content</span><span class="p">{</span>
+    <span class="nl">grid-column</span><span class="p">:</span> <span class="m">2</span> <span class="p">/</span> <span class="m">-1</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>This adjusts the positioning of the <code class="highlighter-rouge">main-content</code> area to start at the second line of the grid column axis. The previously defined position of the <code class="highlighter-rouge">main-nav</code> is still set to <code class="highlighter-rouge">1</code> which is where we want it to be. The only other CSS you need to apply is to hide the <code class="highlighter-rouge">&lt;button&gt;</code> used to toggle the visibility of the menu. The rule on <code class="highlighter-rouge">main-nav</code> resets the transform on the menu so it’s always visible on the page.</p>
+
+<h2 id="accessibility-interactions-and-javascript">Accessibility, Interactions and JavaScript.</h2>
+
+<p><strong>Note (May 11, 2017):</strong> Heydon Pickering has a very thorough article on his Inclusive Components site on <a href="https://inclusive-components.design/menus-menu-buttons/">Menus and Menu Buttons</a> that you should read when implementing this pattern. I will update this post to add things I missed in the next few days.</p>
+
+<p>Now that the basic grid is set up and the <code class="highlighter-rouge">main-nav</code> has been booted off to the side we need to provide the user with a button to display it. While it’s possible to handle the visibility of an element with some clever CSS hacks is rarely a good idea. Unless you’re using elements with baked in interaction like <code class="highlighter-rouge">&lt;details&gt;</code> and <code class="highlighter-rouge">&lt;summary&gt;</code> you’ll need some JavaScript for the interactions and to properly handle accessibility.</p>
+
+<p>To start, I need an element to toggle the visibility of the menu. The only option for that is the humble <code class="highlighter-rouge">&lt;button&gt;</code> element. For this demo, I’m going to place the <code class="highlighter-rouge">&lt;button&gt;</code> in the <code class="highlighter-rouge">main-header</code>.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;header</span> <span class="na">class=</span><span class="s">"main-header"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"js-navigation btn"</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-owns=</span><span class="s">"main-nav"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+  Menu
+  <span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/header&gt;</span></code></pre></figure>
+
+<p><a href="https://marcysutton.com/links-vs-buttons-in-modern-web-applications/">Marcy Sutton</a> and <a href="https://github.com/Heydon/inclusive-menu-button">Heydon Pickering</a> have talked and written extensively about how a11y is negatively impacted when authors use an element other than <code class="highlighter-rouge">&lt;button&gt;</code> for this type of interaction.</p>
+
+<ul>
+  <li>The <code class="highlighter-rouge">js-navigation</code> class exists as a hook for the JS function that will show the off-canvas navigation</li>
+  <li>The <code class="highlighter-rouge">aria-haspopup</code> attribute indicates that the element has a hiddent context menu. More information on this attribute is available <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-haspopup">here</a></li>
+  <li>The <code class="highlighter-rouge">aria-owns</code> attribute accepts an ID and “define a visual, functional, or contextual parent/child relationship between DOM elements where the DOM hierarchy cannot be used to represent the relationship.” More information on this attribute is available <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-owns">here</a></li>
+  <li>The <code class="highlighter-rouge">aria-expanded</code> attribute, “Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.”. More information on this attribute is available <a href="https://www.w3.org/TR/wai-aria/states_and_properties#aria-expanded">here</a></li>
+</ul>
+
+<p><strong>Note:</strong> <em>If there’s something incorrect or harmful in this approach to a11y please let me know.</em></p>
+
+<h3 id="the-nav-element-and-visibility">The <code class="highlighter-rouge">&lt;nav&gt;</code> element and visibility</h3>
+
+<p>On smaller viewports, that navigation menu is only visible when the user clicks on the Menu button. We have to go back and add an attribute to the <code class="highlighter-rouge">&lt;nav&gt;</code> to indicate it’s visibility:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"main-nav"</span> <span class="na">id=</span><span class="s">"main-nav"</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/nav&gt;</span></code></pre></figure>
+
+<p>On really wide viewports (say something like 1600px or wider) the navigation will always be visible. To make sure the aria role is acurate include a titch of JS to change the attribute on larger screens using <code class="highlighter-rouge">matchMedia</code>:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">navCont</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.js-nav'</span><span class="p">);</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="nb">window</span><span class="p">.</span><span class="nx">matchMedia</span><span class="p">(</span><span class="s2">"(min-width: 1600px)"</span><span class="p">).</span><span class="nx">matches</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">navCont</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"aria-hidden"</span><span class="p">,</span> <span class="s2">"false"</span><span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>The value of the <code class="highlighter-rouge">aria-hidden</code> attribute will also need to be toggled when the visibility of the menu is toggled. The JavaScript will also handle the toggling of a class on <code class="highlighter-rouge">&lt;nav&gt;</code> that triggers the animation.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">navTrigger</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.js-navigation'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">navCont</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.js-nav'</span><span class="p">);</span>
+
+<span class="nx">navTrigger</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">'click'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+  <span class="nx">navCont</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">'is-active'</span><span class="p">);</span>
+  <span class="nx">mainContent</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">toggle</span><span class="p">(</span><span class="s1">'nav-active'</span><span class="p">);</span>
+
+  <span class="k">if</span><span class="p">(</span><span class="nx">navCont</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">contains</span><span class="p">(</span><span class="s1">'is-active'</span><span class="p">)){</span>
+      <span class="nx">navCont</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"aria-hidden"</span><span class="p">,</span> <span class="s2">"false"</span><span class="p">)</span>
+      <span class="nx">navTrigger</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"aria-expanded"</span><span class="p">,</span> <span class="s2">"true"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+      <span class="nx">navCont</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"aria-hidden"</span><span class="p">,</span> <span class="s2">"true"</span><span class="p">)</span>
+      <span class="nx">navTrigger</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="s2">"aria-expanded"</span><span class="p">,</span> <span class="s2">"false"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">})</span></code></pre></figure>
+
+<p>As I mentioned earlier, Heydon Pickering released a small library to help with accessibility and buttons called <a href="https://github.com/Heydon/inclusive-menu-button">Inclusive Menu Button</a>. I’d strongly recommend following that project.</p>
+
+<h3 id="the-animation">The Animation</h3>
+
+<p>The layout for various screen sizes has been defined by the CSS Grid including the positioning of the off-canvas menu. Once the <code class="highlighter-rouge">is-active</code> class is added to the menu will animate in from the left.</p>
+
+<h2 id="end">End</h2>
+
+<p>CSS Grid Layout makes creating the base layout for this pattern very easy. This is a simple layout that demonstrates how much you can accomplish with CSS Grid with a little code. The layout of each grid area isn’t defined. Other elements within the grid can be layed out using nested grids, flexbox or any other layout method you feel like. You can see a page using this basic layout <a href="http://joshvogt.co/CSS-Grid-Layout-Examples/off-canvas/">here</a>. I’m not a designer as should be evident the second you click the link.</p>
+
+<p><a href="http://joshvogt.co/CSS-Grid-Layout-Examples/off-canvas/">Tuber: Uber for Hot Dogs</a> (Using CSS Grid Layout)</p>
+
+<hr />
+
+<h4 id="learn-more-about-css-grid-layout">Learn more about CSS Grid Layout.</h4>
+
+<p>The two easiest things to do if you want to learn more about CSS Grid Layout is follow <a href="https://twitter.com/rachelandrew">Rachel Andrew</a> and <a href="https://twitter.com/jensimmons">Jen Simmons</a> on Twitter and read their blogs.</p>
+
+<ul>
+  <li><a href="https://rachelandrew.co.uk/archives/">Rachel Andrew’s blog</a></li>
+  <li><a href="http://jensimmons.com/writing">Jen Simmons’ blog</a></li>
+</ul>
+
+<h4 id="other-resources">Other Resources.</h4>
+
+<ul>
+  <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout">MDN - CSS Grid Layout</a></li>
+  <li><a href="https://www.w3.org/TR/css3-grid-layout/">CSS Grid Layout Module - Level 1</a></li>
+  <li><a href="https://www.mozilla.org/en-US/developer/css-grid/">Mozilla - Weird CSS Grid Demo</a></li>
+</ul>
+
+<p>Corrections or comments can be directed to my twitter account <a href="https://twitter.com/jshvgt">@jshvgt</a>.</p>
+
+  </div>
+
+
+  <aside class="post-webmentions" hidden>
+    <h2>Mentions</h2>
+    <ul class="mentions-list" id="webmentions-container">
+
+    </ul>
+  </aside>
+
+  <div class="mention-response">
+    <h4>Send a response</h4>
+    <p>
+      If you've written a response to this post enter the url of your post and send it over.
+    </p>
+    <form class="mention-form" method="post" action="https://webmention.io/joshvogt.co/webmention">
+      <fieldset>
+          <label for="url-mention">Add your response:</label>
+          <input id="url-mention" type="url" name="source" required placeholder="https://yourdomain/response" />
+          <input type="hidden" name="target" value="https://joshvogt.co/blog/css-grid-layout-off-canvas-navigation/"  />
+          <button>Send webmention</button>
+      </fieldset>
+    </form>
+  </div>
+</article>
+
+
+
+<template id="mention-tmpl">
+  <li>
+    <blockquote class="mention-item">
+      <div class="mention-reply-content"></div>
+      <cite>
+        <span class="mention-reply-author"></span>
+        <a class="mention-reply-link"></a>
+      </cite>
+    </div>
+  </li>
+</template>
+
+<script>
+  var mainScript = document.createElement('script');
+  mainScript.src = '/static-assets/js/posts.js';
+  document.body.appendChild(mainScript);
+</script>
+
+
+<input id="page-path" type="hidden" value="https://joshvogt.co/blog/css-grid-layout-off-canvas-navigation/" />
+<input id="page-id" type="hidden" value="d2cb8d3d0a3bfd854c225305d5113810" /> 
+    </main>
+
+    <footer class="global-footer" role="contentinfo">
+  <div class="indieweb-card h-card">
+    <ul class="indieweb-social">
+     
+       <li>
+         <a href="https://twitter.com/jshvgt" rel="me" class="u-url;">
+           twitter
+         </a>
+       </li>
+     
+       <li>
+         <a href="https://github.com/dumaurier" rel="me" class="u-url;">
+           github
+         </a>
+       </li>
+     
+       <li>
+         <a href="mailto:joshvogt@gmail.com" rel="me" class="u-email">
+           email
+         </a>
+       </li>
+     
+       <li>
+         <a href="https://joshvogt.co/" rel="me" class="u-url">
+           my site
+         </a>
+       </li>
+     
+   </ul>
+
+    
+    <p class="p-note footer-bio">
+      Front-end developer. Focused on performance, accessibility and standards. 
+    </p>
+    <small>&copy; 2018 Josh Vogt. all mistakes are my own.</small>
+  </div>
+
+
+</footer>
+
+
+
+
+<script>
+// Ye Olde Service Worker----------------------------------------------
+(function() {
+ 'use strict';
+  if ('serviceWorker' in navigator) {
+   navigator.serviceWorker
+   .register('/sw.js',{
+    scope: '/'
+   })
+   .then(function() { console.log('Service Worker Registered');  });
+  }
+ })();
+</script>
+
+
+  </body>
+</html>

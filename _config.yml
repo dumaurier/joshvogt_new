@@ -1,0 +1,48 @@
+---
+title: Josh Vogt - Web Developer
+timezone: UTC
+destination: _site/
+domainname: https://joshvogt.co
+baseurl: /
+sitename: Josh Vogt
+assetsurl: /static-assets/
+markdown: kramdown
+highlighter: rouge
+exclude:
+- config
+- screenshots
+- node_modules
+- gulpfile.js
+- package.json
+- src
+- README.md
+- Gemfile
+- Gemfile.lock
+- Dockerfile
+- docker-entrypoint.sh
+port: 4000
+plugins:
+  - liquid-md5
+sass:
+  style: :compressed
+
+# front matter defaults for pages and posts. These fields are also available for editing in the Jekyll Admin GUI. This is available at localhost:4000/admin
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      all: true
+  - scope:
+      path: ''
+      type: pages
+    values:
+      page_only: true
+      layout: standard
+  - scope:
+      path: ''
+      type: posts
+    values:
+      layout: posts
+      abstract: short desciption of your post.
+      author: Josh Vogt
