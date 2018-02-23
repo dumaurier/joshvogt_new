@@ -2,7 +2,7 @@ me:
   name: Josh Vogt
   bio: >-
     Front-end developer. Focused on performance, accessibility and standards.
-  webmention: http://joshvogt.netlify.com
+  webmention: joshvogt.netlify.com
 social:
   - name: twitter
     url: 'https://twitter.com/jshvgt'
