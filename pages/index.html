@@ -38,7 +38,7 @@ pagejs: home.js
           {% for post in site.categories.link %}
           <li>
             <a href="{{ post.link}}">{{ post.title }}</a>
-              <a href="{{ post.url }}">View Permalink on this site</a>
+            <p><a href="{{ post.url }}">View Permalink</a> on this site</p>
             </li>
          {% endfor %}
           </ul>
