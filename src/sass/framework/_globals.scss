@@ -13,6 +13,8 @@ body{
  height: 100%;
  width: 100%;
  font-family: $font-fast;
+ background: $color-black;
+ color: $color-yellow-pale;
 }
 
 body{
@@ -50,17 +52,18 @@ footer{
 }
 
 a {
-    color: $color-blue;
+    color: $color-blue-pale;
     cursor: pointer;
     text-decoration: underline;
     text-decoration-skip: ink;
     font-weight: 500;
     text-decoration-style: double;
-    text-decoration-color: #93caeb;
+    text-decoration-color: $color-blue-pale;
 
     &:focus, &:hover {
       text-decoration: inherit;
-      outline: 1px dashed $color-orange;
+      color: $color-blue;
+      outline: 1px dashed $color-yellow-pale;
       background: $color-yellow-pale;
     }
 }

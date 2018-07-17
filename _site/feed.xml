@@ -7,12 +7,73 @@
     
       
         <item>
+          <title> Short note on aria-label, aria-labelledby, and aria-describedby</title>
+          <description>&lt;p&gt;Léonie Watson provides a short note on which HTML elements can or cannot be used on &lt;code class=&quot;highlighter-rouge&quot;&gt;aria-label&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;aria-labelledby&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;aria-describedby&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Proof that not even aria-roles can help you fix questionable markup.&lt;/p&gt;
+</description>
+          <pubDate>2018-07-16T22:12:00+00:00</pubDate>
+          <link>/posts/link/short-note-on-aria-label-aria-labelledby-and-aria-describedby/</link>
+          <guid isPermaLink="true">/posts/link/short-note-on-aria-label-aria-labelledby-and-aria-describedby/</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>This page loaded in X Seconds - Stoyan Stefanov</title>
+          <description>&lt;p&gt;I love the idea of every website have a page load speedometer somewhere in the footer. &lt;a href=&quot;https://www.phpied.com/this-page-loaded-in-x-seconds/&quot;&gt;This post&lt;/a&gt;, which references &lt;a href=&quot;https://timkadlec.com/&quot;&gt;Tim Kadlec’s site&lt;/a&gt; grabs the code from Tim’s site and turns into a handy bookmarklet.&lt;/p&gt;
+
+&lt;p&gt;This is the kind of transparency I’d like to see on big sites. I’d also like big sites to disclose how many external resources we’re loaded and how many 3rd party trackers their site uses…but that will never, ever happen.&lt;/p&gt;
+</description>
+          <pubDate>2018-03-27T16:52:00+00:00</pubDate>
+          <link>/posts/blog/this-page-loaded-in-x-seconds-stoyan-stefanov/</link>
+          <guid isPermaLink="true">/posts/blog/this-page-loaded-in-x-seconds-stoyan-stefanov/</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>How we adopted CSS Grid at Scale</title>
+          <description>&lt;p&gt;A nice write-up by Julian Gaviria on how http://thomasnet.com adopted CSS Grid Layout.&lt;/p&gt;
+</description>
+          <pubDate>2018-03-26T11:13:00+00:00</pubDate>
+          <link>/posts/link/how-we-adopted-css-grid-at-scale/</link>
+          <guid isPermaLink="true">/posts/link/how-we-adopted-css-grid-at-scale/</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>How to make videos accessible</title>
+          <description>&lt;p&gt;An in-depth article on making videos accessible for the web. Daniel Tonon does a great job explaining the requirements for each level of the WCAG as well as giving examples for including audio descriptions.&lt;/p&gt;
+</description>
+          <pubDate>2018-03-20T11:32:00+00:00</pubDate>
+          <link>/posts/link/how-to-make-videos-accessible/</link>
+          <guid isPermaLink="true">/posts/link/how-to-make-videos-accessible/</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>How fast is amp really?</title>
+          <description>&lt;p&gt;Tim Kadlec does yeoman’s work to test how fast AMP really. Hint: Not as fast as you’d think. A lot of AMP’s benefit comes from the fact that Google preloads the content. Every page on the web would benefit from a perceived speed boost from Google preloaded their content.&lt;/p&gt;
+
+&lt;p&gt;This post also contains a nightmare-inducing waterfall graph.&lt;/p&gt;
+</description>
+          <pubDate>2018-03-19T13:10:00+00:00</pubDate>
+          <link>/posts/link/how-fast-is-amp-really/</link>
+          <guid isPermaLink="true">/posts/link/how-fast-is-amp-really/</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Bridgy</title>
           <description>&lt;p&gt;A service to collect events from social media platforms for your own site.&lt;/p&gt;
 </description>
           <pubDate>2018-02-08T06:47:00+00:00</pubDate>
-          <link>http://localhost:4000/posts/link/bridgy/</link>
-          <guid isPermaLink="true">http://localhost:4000/posts/link/bridgy/</guid>
+          <link>/posts/link/bridgy/</link>
+          <guid isPermaLink="true">/posts/link/bridgy/</guid>
         </item>
       
     
@@ -22,8 +83,8 @@
           <description>&lt;p&gt;Netlify does more than just host your static site. It gives you unbelievable control of deployments, form handling and SSL.&lt;/p&gt;
 </description>
           <pubDate>2018-02-06T10:50:00+00:00</pubDate>
-          <link>http://localhost:4000/posts/link/10-netlify-features/</link>
-          <guid isPermaLink="true">http://localhost:4000/posts/link/10-netlify-features/</guid>
+          <link>/posts/link/10-netlify-features/</link>
+          <guid isPermaLink="true">/posts/link/10-netlify-features/</guid>
         </item>
       
     
@@ -33,8 +94,8 @@
           <description>&lt;p&gt;Webmention.io is a hosted service to help you with Webmentions.&lt;/p&gt;
 </description>
           <pubDate>2018-02-04T09:17:00+00:00</pubDate>
-          <link>http://localhost:4000/posts/link/webmentions-io/</link>
-          <guid isPermaLink="true">http://localhost:4000/posts/link/webmentions-io/</guid>
+          <link>/posts/link/webmentions-io/</link>
+          <guid isPermaLink="true">/posts/link/webmentions-io/</guid>
         </item>
       
     
@@ -44,8 +105,8 @@
           <description>&lt;p&gt;A guide to getting started on the indieweb&lt;/p&gt;
 </description>
           <pubDate>2018-02-04T00:18:00+00:00</pubDate>
-          <link>http://localhost:4000/posts/link/indiewebify-me/</link>
-          <guid isPermaLink="true">http://localhost:4000/posts/link/indiewebify-me/</guid>
+          <link>/posts/link/indiewebify-me/</link>
+          <guid isPermaLink="true">/posts/link/indiewebify-me/</guid>
         </item>
       
     
@@ -61,8 +122,8 @@
 &lt;p&gt;&lt;a href=&quot;https://pwa-jekyll-starter.netlify.com/posts/blog/this-is-a-test/&quot;&gt;This is a link to the test site&lt;/a&gt;&lt;/p&gt;
 </description>
           <pubDate>2018-01-29T09:27:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/webmentions-are-weird/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/webmentions-are-weird/</guid>
+          <link>/blog/webmentions-are-weird/</link>
+          <guid isPermaLink="true">/blog/webmentions-are-weird/</guid>
         </item>
       
     
@@ -74,8 +135,8 @@
 &lt;p&gt;&lt;a href=&quot;https://pwa-jekyll-starter.netlify.com/posts/blog/this-is-a-test/&quot;&gt;I’m linking to this site&lt;/a&gt;&lt;/p&gt;
 </description>
           <pubDate>2018-01-22T12:14:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/okay-webmentions/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/okay-webmentions/</guid>
+          <link>/blog/okay-webmentions/</link>
+          <guid isPermaLink="true">/blog/okay-webmentions/</guid>
         </item>
       
     
@@ -107,8 +168,8 @@
 &lt;p&gt;A demo of the site is hosted on Netlify (which is super easy to use). &lt;a href=&quot;https://pwa-jekyll-starter.netlify.com/&quot;&gt;Visit Jekyll PWA demo&lt;/a&gt;&lt;/p&gt;
 </description>
           <pubDate>2018-01-06T09:27:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/jekyll-pwa-starter/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/jekyll-pwa-starter/</guid>
+          <link>/blog/jekyll-pwa-starter/</link>
+          <guid isPermaLink="true">/blog/jekyll-pwa-starter/</guid>
         </item>
       
     
@@ -141,8 +202,8 @@
 &lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
 </description>
           <pubDate>2017-05-12T23:27:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/front-end-links-may200/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/front-end-links-may200/</guid>
+          <link>/blog/front-end-links-may200/</link>
+          <guid isPermaLink="true">/blog/front-end-links-may200/</guid>
         </item>
       
     
@@ -354,8 +415,8 @@
 &lt;p&gt;Corrections or comments can be directed to my twitter account &lt;a href=&quot;https://twitter.com/jshvgt&quot;&gt;@jshvgt&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2017-05-02T23:27:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/css-grid-layout-off-canvas-navigation/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/css-grid-layout-off-canvas-navigation/</guid>
+          <link>/blog/css-grid-layout-off-canvas-navigation/</link>
+          <guid isPermaLink="true">/blog/css-grid-layout-off-canvas-navigation/</guid>
         </item>
       
     
@@ -464,8 +525,8 @@
 &lt;p&gt;Corrections or comments can be directed to my twitter account &lt;a href=&quot;https://twitter.com/jshvgt&quot;&gt;@jshvgt&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2017-04-26T22:46:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/css-grid-layout-and-absolute-positioning/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/css-grid-layout-and-absolute-positioning/</guid>
+          <link>/blog/css-grid-layout-and-absolute-positioning/</link>
+          <guid isPermaLink="true">/blog/css-grid-layout-and-absolute-positioning/</guid>
         </item>
       
     
@@ -531,8 +592,8 @@ Grid Layout is a new layout model for CSS that has powerful abilities to control
 &lt;p&gt;Corrections or comment can be directed to my twitter account &lt;a href=&quot;https://twitter.com/jshvgt&quot;&gt;@jshvgt&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2017-04-18T22:17:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/layout-differences-between-css-grid-layout-and-multi-column/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/layout-differences-between-css-grid-layout-and-multi-column/</guid>
+          <link>/blog/layout-differences-between-css-grid-layout-and-multi-column/</link>
+          <guid isPermaLink="true">/blog/layout-differences-between-css-grid-layout-and-multi-column/</guid>
         </item>
       
     
@@ -633,8 +694,8 @@ Grid Layout is a new layout model for CSS that has powerful abilities to control
 &lt;p&gt;Corrections or comment can be directed to my twitter account &lt;a href=&quot;https://twitter.com/jshvgt&quot;&gt;@jshvgt&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2017-04-02T22:13:00+00:00</pubDate>
-          <link>http://localhost:4000/blog/css-grid-layout-grid-template-areas/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/css-grid-layout-grid-template-areas/</guid>
+          <link>/blog/css-grid-layout-grid-template-areas/</link>
+          <guid isPermaLink="true">/blog/css-grid-layout-grid-template-areas/</guid>
         </item>
       
     
@@ -749,8 +810,8 @@ You'll now need to modify the &lt;code&gt;head&lt;/code&gt; of the template to r
 &lt;/p&gt;Corrections or comments can be directed to my twitter account &lt;a href=&quot;https://twitter.com/jshvgt&quot;&gt;@jshvgt&lt;/a&gt;.&lt;/p&gt;
 </description>
           <pubDate>2017-03-11T22:16:01+00:00</pubDate>
-          <link>http://localhost:4000/blog/critical-path-jekyll/</link>
-          <guid isPermaLink="true">http://localhost:4000/blog/critical-path-jekyll/</guid>
+          <link>/blog/critical-path-jekyll/</link>
+          <guid isPermaLink="true">/blog/critical-path-jekyll/</guid>
         </item>
       
     
