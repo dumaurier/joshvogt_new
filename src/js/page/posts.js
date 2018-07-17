@@ -11,7 +11,6 @@ var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedD
 JekyllPWA.Posts = {
     init: function () {
         this.initCreateMentionsStore();
-        this.initCheckForStoredMentions();
         this.initDisplayMentions();
         this.initConnectCheck();
     },
@@ -25,9 +24,9 @@ JekyllPWA.Posts = {
 
     initCreateMentionsStore: function() {
         // Create IndexedDB Store for each article. 
-        var open = indexedDB.open("Mentions", 1);
+        var open = indexedDB.open("Mentions", 2);
         // Create the schema
-        open.onupgradeneeded = function() {
+        open.onsuccess = function() {
         let db = open.result;
 
         //Key path is the MD5 hash of the value of the {{ post.id }} variable in Jekyll. 
@@ -37,10 +36,12 @@ JekyllPWA.Posts = {
     },
 
     initCheckForStoredMentions: function() {
-        var openStorage = window.indexedDB.open( "Mentions", 1 );
+        var openStorage = window.indexedDB.open( "Mentions", 2 );
         
         openStorage.onsuccess = function(event){
             db = openStorage.result;
+
+            console.table(db);
 
             var transaction = db.transaction([ pageID ], "readwrite" );
             var objectStore = transaction.objectStore( pageID );
@@ -110,7 +111,7 @@ JekyllPWA.Posts = {
         .then(function(){
             mentions.forEach(function(el){
                 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
-                var openStorage = window.indexedDB.open("Mentions", 1);
+                var openStorage = window.indexedDB.open("Mentions", 2);
         
                 openStorage.onsuccess = function(event){
                     db = openStorage.result;

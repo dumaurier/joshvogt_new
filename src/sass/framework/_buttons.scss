@@ -6,6 +6,7 @@ button,
   border-radius: 4px;
   background: $grey-ghost;
   @include font-size(1);
+  color: $color-blue;
 
   &[disabled]{
     background: $color-yellow-pale;
