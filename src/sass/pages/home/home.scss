@@ -31,7 +31,14 @@
 }
 
 li + li{
-  margin-top: 1.3rem;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid $color-yellow-pale;
+}
+
+.posts-list{
+  list-style: none;
+  padding: 0;
 }
 
 @media screen and (min-width: 30rem){
