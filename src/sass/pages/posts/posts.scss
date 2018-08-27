@@ -18,6 +18,10 @@
  display: block;
 }
 
+li + li{
+  margin-top: .5rem;
+}
+
 .mentions-list{
   list-style: none;
   margin: 0;

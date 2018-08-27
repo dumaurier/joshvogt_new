@@ -56,7 +56,7 @@
   <style>
   *{box-sizing:border-box;color:inherit;font-family:inherit;line-height:inherit}html,body{margin:0;padding:0;height:100%;width:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";background:#141619;color:#fdf9d8}body{display:-ms-flexbox;display:flex;-ms-flex-flow:column nowrap;flex-flow:column nowrap;-ms-flex-pack:justify;justify-content:space-between}main{-ms-flex-positive:1;flex-grow:1;display:block;max-width:100%;width:100%;height:auto;position:static}main:focus{outline:none}footer{display:none}.container{display:block;width:inherit;margin:0 auto;position:relative}.block{max-width:1240px;margin:0 auto}a{color:#c2e0ff;cursor:pointer;text-decoration:underline;text-decoration-skip:ink;font-weight:500;-webkit-text-decoration-style:double;-moz-text-decoration-style:double;text-decoration-style:double;text-decoration-color:#c2e0ff}a:focus,a:hover{text-decoration:inherit;color:#0073BD;outline:1px dashed #fdf9d8;background:#fdf9d8}img{max-width:100%}.highlighter-rouge{margin-top:1rem}.highlight{padding:.5rem;line-height:1.6;background:#0073BD;color:#fff;font-size:16px;font-size:1rem;overflow:auto;margin:10px}.disabled-link{cursor:not-allowed;color:#f7fafb}.visuallyhidden{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute;width:1px}[href="#main"]{position:absolute;top:0;right:110%}[href="#main"]:focus{right:auto}.global-footer{height:100px;border-top:0.2rem solid #25282e}button,.primary-cta{margin-top:1rem;border:1px solid #141619;padding:.5rem 1rem;border-radius:4px;background:#f7fafb;font-size:16px;font-size:1rem;color:#0073BD}button[disabled],.primary-cta[disabled]{background:#fdf9d8;color:#141619}.global-footer{min-height:130px;padding:.5rem}.indieweb-social{list-style:none;margin:0;padding:20px;display:grid;grid-template-columns:repeat(auto-fill, minmax(100px, 1fr))}.indieweb-social li+li{margin-top:0}.footer-bio{max-width:460px;padding:20px}.header-container{-ms-flex:0 0 auto;flex:0 0 auto;height:60px;width:100vw;border-bottom:0.15rem solid #525967;display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:justify;justify-content:space-between;padding:0 10px}.header-container h1{font-size:17.6px;font-size:1.1rem;font-weight:600}.header-container .home-link{display:inline-block;white-space:nowrap;line-height:60px;height:100%}.header-container .site-logo{width:55px;float:left;margin-right:.5rem}.header-container .header-links{margin:0}@media screen and (min-width: 30rem){.header-links{margin:0 3rem}}
 
-    .home{display:grid;grid-template-columns:repeat(8, 1fr);padding:1rem}.heading{font-size:20.8px;font-size:1.3rem;grid-column:1 / -1}.heading-sub{grid-column:2 / -1}.indie-intro{grid-column:1 / -1}.feed-block{grid-column:1 / -1}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:1.3rem}@media screen and (min-width: 30rem){.home{display:grid;grid-template-columns:repeat(16, 1fr)}.heading{font-size:35.2px;font-size:2.2rem;grid-column:4 / 12}.heading-sub{grid-column:4 / 10;grid-row:2}.indie-intro{grid-column:1 / 6}.feed-block{grid-column:3 / 13}}
+    .home{display:grid;grid-template-columns:repeat(8, 1fr);padding:1rem}.heading{font-size:20.8px;font-size:1.3rem;grid-column:1 / -1}.heading-sub{grid-column:2 / -1}.indie-intro{grid-column:1 / -1}.feed-block{grid-column:1 / -1}.global-footer{display:block}.posts-list a{font-size:18px;font-size:1.125rem}li+li{margin-top:2rem;padding-top:1rem;border-top:1px solid #fdf9d8}.posts-list{list-style:none;padding:0}@media screen and (min-width: 30rem){.home{display:grid;grid-template-columns:repeat(16, 1fr)}.heading{font-size:35.2px;font-size:2.2rem;grid-column:4 / 12}.heading-sub{grid-column:4 / 10;grid-row:2}.indie-intro{grid-column:1 / 6}.feed-block{grid-column:3 / 13}}
 
    
   </style>
@@ -91,12 +91,61 @@
 
     <main id="main" class="home" tabindex="0">
         <section class="block feed-block">
-    <h2>Blog</h2>
+    <h2>notes.</h2>
       <ul class="posts-list">
         
         <li>
+          <a href="/posts/blog/drop-in-css-for-semantically-righteous-html/">Drop-in CSS for Semantically Righteous HTML  - August 20, 2018</a>
+          <p>A list of recommended CSS files to add to a page to make it look nicer than the default user agent styles provided by browsers.</p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/short-note-on-aria-label-aria-labelledby-and-aria-describedby/"> Short note on aria-label, aria-labelledby, and aria-describedby - July 16, 2018</a>
+          <p>Léonie Watson provides a short note on which HTML elements can or cannot be used on `aria-label`, `aria-labelledby` and `aria-describedby`. </p>
+        </li>
+       
+        <li>
           <a href="/posts/blog/this-page-loaded-in-x-seconds-stoyan-stefanov/">This page loaded in X Seconds - Stoyan Stefanov - March 27, 2018</a>
           <p>A post espousing the benefits of page speed disclosure.</p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/how-we-adopted-css-grid-at-scale/">How we adopted CSS Grid at Scale - March 26, 2018</a>
+          <p>A nice write-up by Julian Gaviria on how http://thomasnet.com adopted CSS Grid Layout.
+
+![Screenshot of Firefox dev tools Layout panel showing overlay grid.](/static-assets/images/uploads/grid-thomasnet.png)</p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/how-to-make-videos-accessible/">How to make videos accessible - March 20, 2018</a>
+          <p>An in-depth article on making videos accessible for the web. Daniel Tonon does a great job explaining the requirements for each level of the WCAG as well as giving examples for including audio descriptions.</p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/how-fast-is-amp-really/">How fast is amp really? - March 19, 2018</a>
+          <p>Tim Kadlec does yeoman's work to test how fast AMP really. Hint: Not as fast as you'd think.</p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/bridgy/">Bridgy - February 08, 2018</a>
+          <p>
+
+Bridgy pulls comments, likes, and reshares on social networks back to your web site. You can also use it to post to social networks - or comment, like, reshare, or even RSVP - from your own web site. </p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/10-netlify-features/">10 Netlify Features - February 06, 2018</a>
+          <p>Netlify does more than just host your static site. It gives you unbelievable control of deployments, form handling and SSL.</p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/webmentions-io/">Webmentions Service - February 04, 2018</a>
+          <p>Webmention.io is a hosted service to help you with Webmentions.</p>
+        </li>
+       
+        <li>
+          <a href="/posts/link/indiewebify-me/">IndieWebifyMe - February 04, 2018</a>
+          <p>short desciption of your post.</p>
         </li>
        
         <li>
@@ -145,54 +194,6 @@
         </li>
        
       </ul>
-      <h2>Notes</h2>
-        <ul class="posts-list">
-          
-        </ul>
-        <h2>Links</h2>
-        <ul class="links-list">
-          
-          <li>
-            <a href="https://developer.paciellogroup.com/blog/2017/07/short-note-on-aria-label-aria-labelledby-and-aria-describedby/"> Short note on aria-label, aria-labelledby, and aria-describedby</a>
-            <p><a href="/posts/link/short-note-on-aria-label-aria-labelledby-and-aria-describedby/">View Permalink</a> on this site</p>
-            </li>
-         
-          <li>
-            <a href="https://julian.is/article/css-grid-at-scale/">How we adopted CSS Grid at Scale</a>
-            <p><a href="/posts/link/how-we-adopted-css-grid-at-scale/">View Permalink</a> on this site</p>
-            </li>
-         
-          <li>
-            <a href="http://adelphi.digital/articles/how-to-make-videos-accessible/">How to make videos accessible</a>
-            <p><a href="/posts/link/how-to-make-videos-accessible/">View Permalink</a> on this site</p>
-            </li>
-         
-          <li>
-            <a href="https://timkadlec.com/remembers/2018-03-19-how-fast-is-amp-really/">How fast is amp really?</a>
-            <p><a href="/posts/link/how-fast-is-amp-really/">View Permalink</a> on this site</p>
-            </li>
-         
-          <li>
-            <a href="https://brid.gy/">Bridgy</a>
-            <p><a href="/posts/link/bridgy/">View Permalink</a> on this site</p>
-            </li>
-         
-          <li>
-            <a href="https://medium.com/netlify/10-netlify-features-to-surprise-and-delight-225e846b7b21">10 Netlify Features</a>
-            <p><a href="/posts/link/10-netlify-features/">View Permalink</a> on this site</p>
-            </li>
-         
-          <li>
-            <a href="https://webmention.io/">Webmentions Service</a>
-            <p><a href="/posts/link/webmentions-io/">View Permalink</a> on this site</p>
-            </li>
-         
-          <li>
-            <a href="https://indiewebify.me/">IndieWebifyMe</a>
-            <p><a href="/posts/link/indiewebify-me/">View Permalink</a> on this site</p>
-            </li>
-         
-          </ul>
   </section>
 
 
