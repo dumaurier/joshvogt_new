@@ -16,3 +16,7 @@ The new version is on GitHub: [Jekyll + PWA + Netlify + Webmentions](https://git
 As part of this I also changed the URL for posts which killed the existing webmentions. Though they were really just for demo purposes. The point is, I've got to resend a webmention to the new test page. Here it is: <https://pwa-jekyll-starter.netlify.com/posts/2018/this-is-a-test/>
 
 So, if one were to follow that link then one would hopefully see a webmention from this site on the linked site.
+
+
+
+Also [this](https://focused-mayer-e4e96b.netlify.com/notes/2018/this-projects-lighthouse-score/)
